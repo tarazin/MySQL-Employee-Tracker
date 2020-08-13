@@ -166,12 +166,12 @@ addRole = () => {
     {
       name: "salary",
       type: "input",
-      message: "What is the salary for this possition?"
+      message: "What is the salary for this position?"
     },
     {
       name: "department_id",
       type: "list",
-      message: "What is the department for this possition?",
+      message: "What is the department for this position?",
       choices: departmentOptions
     },
   ]).then(function(answer) {
@@ -403,7 +403,7 @@ for (i = 0; i < roleOptions.length; i++) {
     };
   }
 }
-console.log("Role updated succesfully");
+console.log("Role updated successfully");
 getEmployees();
 getRoles();
 start();
@@ -463,7 +463,7 @@ for (i = 0; i < managerOptions.length; i++) {
     connection.query(`UPDATE employee SET manager_id = ${newChoice} WHERE id = ${employeeSelected}`), (err, res) => {
       if (err) throw err;
     };
-    console.log("Manager Updated Succesfully");
+    console.log("Manager Updated Successfully");
   }
 }
 getEmployees();
@@ -529,7 +529,7 @@ deleteDepartment = () => {
         connection.query(`DELETE FROM department Where id = ${newChoice}`), (err, res) => {
           if (err) throw err;
         };
-        console.log("Department: " + answer.deleteDepartment + " Deleted Succesfully");
+        console.log("Department: " + answer.deleteDepartment + " Deleted Successfully");
       }
     }
     getDepartments();
@@ -563,7 +563,7 @@ deleteRole = () => {
         connection.query(`DELETE FROM role Where id = ${newChoice}`), (err, res) => {
           if (err) throw err;
         };
-        console.log("Role: " + answer.deleteRole + " Deleted Succesfully");
+        console.log("Role: " + answer.deleteRole + " Deleted Successfully");
       }
     }
     getRoles();
@@ -597,7 +597,7 @@ deleteEmployee = () => {
         connection.query(`DELETE FROM employee Where id = ${newChoice}`), (err, res) => {
           if (err) throw err;
         };
-        console.log("Employee: " + answer.deleteEmployee + " Deleted Succesfully");
+        console.log("Employee: " + answer.deleteEmployee + " Deleted Successfully");
       }
     }
     getEmployees();
